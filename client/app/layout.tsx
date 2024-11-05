@@ -5,8 +5,9 @@ import '../public/css/animate.min.css';
 import '../public/css/jquery-ui.css';
 import '../public/css/responsive.css';
 import '../public/css/normalize.css';
-import Footer from "../app/footer/page";
-import { WalletProviderContext } from "./WalletProviderContext/page";
+import { WalletProviderContext } from "@/components/WalletProviderContext/page";
+import Footer from "@/components/footer/page";
+import Navbar from "@/components/navbar/page";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,24 +35,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         <WalletProviderContext>
-        {children}
+          <>
+            <Navbar />
+            {children}
+            <Footer />
+          </>
         </WalletProviderContext>
-        <Footer />
 
-        <script src="../public/js/bootstrap.bundle.min.js"></script>
-        <script src="../public/js/custom.js"></script>
-        <script src="../public/js/jquery-3.0.0.min.js"></script>
-        <script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="../public/js/jquery.min.js"></script>
-        <script src="../public/js/jquery.validate.js"></script>
-        <script src="../public/js/popper.min.js"></script>
-        <script src="../public/js/plugin.js"></script>
-      
-  
-
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
       </body>
     </html>
   );

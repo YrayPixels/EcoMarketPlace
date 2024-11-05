@@ -1,10 +1,10 @@
 // pages/services.js
-import Navbar from '../navbar/page'; 
+import Navbar from '../../components/navbar/page';
 import Link from 'next/link';
 
 const Services = () => {
   return (
-    
+
     <div className="bg-gray-100 py-8">
       <Navbar />
       <div className="container mx-auto">

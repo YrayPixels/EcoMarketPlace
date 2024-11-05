@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import wallet from '../wallet/page';
+import wallet from '../../app/wallet/page';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
@@ -15,7 +15,7 @@ const Navbar = () => {
     const router = useRouter();
     const { connected, publicKey } = useWallet();
 
- 
+
 
     const handleLogin = () => {
         if (connected) {
@@ -25,7 +25,7 @@ const Navbar = () => {
         }
     }
     return (
-        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="bg-white dark:bg-gray-900  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/images/ecotrade.jpg" className="h-10 rounded-full" alt="Flowbite Logo" />
