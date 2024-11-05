@@ -3,10 +3,16 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { checkUserExists } from '@/components/requestsHandler/requestsItems';
-import Cards from '@/components/files/cards';
+import MarketCards from '@/components/files/marketcards';
 
 
 const cards = [
+    { title: "Total Trades", value: 3000 },
+    { title: "Current Balance", value: 123355 },
+    { title: "Pending Transactions", value: 3 },
+    { title: "Total Trades", value: 3000 },
+    { title: "Current Balance", value: 123355 },
+    { title: "Pending Transactions", value: 3 },
     { title: "Total Trades", value: 3000 },
     { title: "Current Balance", value: 123355 },
     { title: "Pending Transactions", value: 3 },
@@ -41,13 +47,13 @@ const Dashboard = () => {
             <div>
                 <h2 className='font-bold text-[24px]'>Market</h2>
             </div>
-            <div className='flex flex-row gap-x-3'>
+            <div className='flex flex-row flex-wrap justify-center items-center gap-x-3'>
 
-                {/* {cards.map((item: any, index: number) => {
+                {cards.map((item: any, index: number) => {
                     return (
-                        <Cards title={item.title} value={item.value} />
+                        <MarketCards index={index} title={item.title} value={item.value} />
                     )
-                })} */}
+                })}
             </div>
 
         </div>
