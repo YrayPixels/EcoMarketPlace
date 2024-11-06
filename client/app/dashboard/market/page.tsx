@@ -73,10 +73,10 @@ export default function MarketCards() {
                             key={item.id}
                             className="market-item relative flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white transition-transform transform hover:scale-105"
                         >
-                            <img src={item.image} alt={item.name} className="w-full h-50 object-cover mb-4 rounded" />
-                            <h2 className="text-lg font-semibold text-center">{item.name}</h2>
-                            <p className="text-xl font-bold text-blue-600">{item.price}</p>
-                            <p className="text-xl font-bold text-blue-600">Quantity:{item.Quantity}</p>
+                            <img src="/carbon logo.PNG" alt={item.name} className="w-full h-50 object-cover mb-4 rounded" />
+                            <h2 className="text-lg font-semibold text-center">{item.item_name}</h2>
+                            <p className="text-xl font-bold text-blue-600">{item.item_price}</p>
+                            <p className="text-xl font-bold text-blue-600">Quantity:{item.item_quantity}</p>
 
 
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
