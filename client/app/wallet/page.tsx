@@ -3,12 +3,9 @@
 import React, { createContext } from 'react';
 import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
-import { clusterApiUrl } from '@solana/web3.js';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider, useWallet } from '@solana/wallet-adapter-react';
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
-import Navbar from '../../components/navbar/page';
+
 import '@solana/wallet-adapter-react-ui/styles.css';
 
 

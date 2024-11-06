@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import { useState } from 'react';
-import Navbar from '../navbar/page.tsx';
+
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -28,7 +28,7 @@ const ContactUs = () => {
 
   return (
     <>
-   <Navbar />
+
 
       <Head>
         <title>Contact Us - EcoTrade</title>

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Head from 'next/head';
-import Navbar from '../navbar/page.tsx';
+
 import { gsap } from 'gsap';
 
 export default function AboutUs() {
@@ -37,7 +37,7 @@ export default function AboutUs() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
+
 
       <main className="bg-gradient-to-r from-green-700 to-blue-700 text-black p-8 relative z-10 mt-5"> {/* Changed text color to gray */}
         <div className='w-10/12 m-auto'>

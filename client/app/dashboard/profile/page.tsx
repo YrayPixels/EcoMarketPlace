@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { checkUserExists } from '@/components/requestsHandler/requestsItems';
+import { checkUserExists, signUpUser } from '@/components/requestsHandler/requestsItems';
 import Cards from '@/components/files/cards';
 import CustomInput from '@/components/customInput/customInput';
 
@@ -18,7 +18,16 @@ const Dashboard = () => {
     const { disconnect, connected, publicKey } = useWallet();
     const [registered, setRegisterd] = useState<boolean | null>(null);
     const [user, setUserDetails] = useState<any | null>(null);
+    const [userInfo, setUserInfo] = useState({
+        email: "",
+        first_name: "",
+        last_name: "",
+        country: "",
+        state: "",
 
+    })
+
+    console.log(userInfo);
 
     useEffect(() => {
         if (!connected) {
@@ -31,14 +40,23 @@ const Dashboard = () => {
                 console.log(response);
                 if (response.data.status == "failed") {
                     setRegisterd(false);
-
                 } else {
                     setRegisterd(true)
+                    setUserDetails(response.data.user)
                 }
-
             })()
         }
     }, [connected, publicKey]);
+
+    const registerUser = async () => {
+        if (!publicKey) return;
+        const response = await signUpUser(userInfo.last_name, userInfo.state, userInfo.country, userInfo.first_name, publicKey?.toString(), userInfo.email);
+        if (response.data.status == "success" ){
+
+        }else{
+
+        }
+    }
 
 
     return (
@@ -57,36 +75,45 @@ const Dashboard = () => {
                         <CustomInput
                             type='text'
                             placeholder='enter your first name'
+                            onChange={(e) => setUserInfo({ ...userInfo, first_name: e.target.value })}
                         />
                         <CustomInput
                             type='text'
                             placeholder='enter your last name'
+                            onChange={(e) => setUserInfo({ ...userInfo, last_name: e.target.value })}
+
                         />
                         <CustomInput
                             type='text'
                             placeholder='enter your email'
+                            onChange={(e) => setUserInfo({ ...userInfo, email: e.target.value })}
+
                         />
                         <CustomInput
                             type='country'
                             placeholder='enter your country'
+                            onChange={(e) => setUserInfo({ ...userInfo, country: e.target.value })}
+
                         />
                         <CustomInput
                             type='state'
                             placeholder='enter your state'
+                            onChange={(e) => setUserInfo({ ...userInfo, state: e.target.value })}
+
                         />
 
                         <div className='py-3 flex flex-row justify-center items-center'>
 
-                            <button className='my-3 bg-black text-white p-3 w-6/12 m-auto rounded-lg'>
+                            <button onClick={()=>registerUser()} className='my-3 bg-black text-white p-3 w-6/12 m-auto rounded-lg'>
                                 Update Profile
                             </button>
                         </div>
 
                     </div>
                     :
-                    <>
-
-                    </>
+                   <div>
+                    {}
+                   </div>
 
 
                 }

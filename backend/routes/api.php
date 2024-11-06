@@ -64,6 +64,5 @@ Route::post('/verify-trade', [TradeManagementController::class, 'verify_trade'])
 
 //Purchase
 
-
 Route::post('/buy_credits', [TradeManagementController::class, 'buy_credits']);
 // Route::post()

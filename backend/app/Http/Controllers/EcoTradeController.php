@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 
 
+
 class EcoTradeController extends Controller
 {
 
@@ -58,7 +59,6 @@ class EcoTradeController extends Controller
         }
 
         $data = [
-
             "first_name" => $request->first_name,
             "last_name" => $request->last_name,
             "wallet_address" => $request->wallet_address,

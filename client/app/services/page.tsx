@@ -1,12 +1,12 @@
 // pages/services.js
-import Navbar from '../../components/navbar/page';
+
 import Link from 'next/link';
 
 const Services = () => {
   return (
 
     <div className="bg-gray-100 py-8">
-      <Navbar />
+
       <div className="container mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
         <div className="flex flex-wrap justify-center">
