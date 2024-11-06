@@ -1,7 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from '../../modal/page';
 import SellerInvoiceModal from '../../SellerInvoiceModal/page';
+import { getTrades } from '@/components/requestsHandler/requestsItems';
 
 interface Item {
     id: number;
@@ -28,7 +29,8 @@ export default function MarketCards() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isInvoiceModalOpen, setIsInvoiceModalOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState<Item | null>(null);
-
+    const [marketItems, setMarketItems] = useState<[] | null>(null);
+    const [update, setUpdate] = useState(0)
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
@@ -37,6 +39,16 @@ export default function MarketCards() {
         setIsInvoiceModalOpen(true);
     };
     const closeInvoiceModal = () => setIsInvoiceModalOpen(false);
+
+    useEffect(() => {
+
+        (async () => {
+            const response = await getTrades();
+            if (response.data.status == "success") {
+                setMarketItems(response.data.items)
+            }
+        })()
+    }, [update])
 
     return (
         <div className="text-black shadow-lg p-2 min-w-[45%] rounded-lg flex flex-col items-center justify-center">
@@ -56,7 +68,7 @@ export default function MarketCards() {
                 <Modal isOpen={isModalOpen} onClose={closeModal} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items.map((item) => (
+                    {items?.map((item: any) => (
                         <div
                             key={item.id}
                             className="market-item relative flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white transition-transform transform hover:scale-105"
@@ -65,6 +77,7 @@ export default function MarketCards() {
                             <h2 className="text-lg font-semibold text-center">{item.name}</h2>
                             <p className="text-xl font-bold text-blue-600">{item.price}</p>
                             <p className="text-xl font-bold text-blue-600">Quantity:{item.Quantity}</p>
+
 
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
                                 <button
@@ -79,13 +92,8 @@ export default function MarketCards() {
                 </div>
 
                 {selectedItem && (
-                    <SellerInvoiceModal isOpen={isInvoiceModalOpen} onClose={closeInvoiceModal}>
-                        <div className='p-4'>
-                            <h3 className="text-lg font-semibold py-2">Seller: {selectedItem.seller}</h3>
-                            <p className="text-md py-2">Name: {selectedItem.name}</p>
-                            <p className="text-md py-2">Quantity: {selectedItem.Quantity}</p>
-                            <p className="text-md py-2">Price: {selectedItem.price}</p>
-                        </div>
+                    <SellerInvoiceModal selectedItem={selectedItem} isOpen={isInvoiceModalOpen} onClose={closeInvoiceModal}>
+
                     </SellerInvoiceModal>
                 )}
             </div>

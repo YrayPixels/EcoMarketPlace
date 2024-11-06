@@ -25,7 +25,10 @@ export const signUpUser = async (
 }
 
 
-export const updateTradeDetails = async (
+export const createTrade = async (
+    itemName: string,
+    itemQuantity: string,
+    itemPrice: string,
     registry_account: File,
     transfer_Documents: File,
     purchase_Agreement: File,
@@ -34,11 +37,12 @@ export const updateTradeDetails = async (
     proof_Of_Payment: File,
     retirement_Certificate: File,
     business_Registration: File,
-    personal_ID: File
+    personal_ID: File,
+    userId: string,
 ) => {
     let bodyContent = new FormData();
 
-    bodyContent.append("registry_account", registry_account);
+    bodyContent.append("registry_account_id", registry_account);
     bodyContent.append("transfer_Documents", transfer_Documents);
     bodyContent.append("purchase_Agreement", purchase_Agreement);
     bodyContent.append("proof_of_payment", proof_of_payment);
@@ -47,8 +51,12 @@ export const updateTradeDetails = async (
     bodyContent.append("retirement_Certificate", retirement_Certificate);
     bodyContent.append("business_Registration", business_Registration);
     bodyContent.append("personal_ID", personal_ID);
+    bodyContent.append("user_id", userId);
+    bodyContent.append('item_name', itemName);
+    bodyContent.append('item_quantity', itemQuantity)
+    bodyContent.append('item_price', itemPrice)
 
-    let response = await request.post({ url: '/update-trade-details', data: bodyContent });
+    let response = await request.post({ url: '/create-trade', data: bodyContent });
     return response;
 };
 
@@ -66,6 +74,11 @@ export const login = async (
 
 
     let response = await request.post({ url: '/login', data: bodyContent })
+    return response;
+}
+
+export const getTrades = async () => {
+    let response = await request.get('/get-trades');
     return response;
 }
 

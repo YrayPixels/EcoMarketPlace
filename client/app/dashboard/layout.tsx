@@ -3,6 +3,7 @@ import SideBar from "@/components/files/sidebar";
 
 import { checkUserExists } from "@/components/requestsHandler/requestsItems";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { connect } from "http2";
 import { useEffect } from "react";
 
 export default function RootLayout({
@@ -11,11 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // const router = useRouter();
-  const { disconnect, connected, publicKey } = useWallet();
+  const { disconnect, connect, connected, publicKey } = useWallet();
 
   useEffect(() => {
     if (!connected) {
-      location.href = "/"
+      connect()
+      // location.href = "/"
     } else {
       //check if user has updated profile
       (async () => {

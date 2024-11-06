@@ -55,7 +55,7 @@ class EcoTradeController extends Controller
     {
         //Check  if any input is null and return error json
         if (!$request->first_name || !$request->last_name || !$request->wallet_address || !$request->email || !$request->state || !$request->country) {
-            return response()->json(['error' => "All fields are required"], 400);
+            return response()->json(["status"=>"failed" , 'message'  => "All fields are required"], 400);
         }
 
         $data = [
@@ -70,9 +70,9 @@ class EcoTradeController extends Controller
         ];
         try {
             $insert = DB::table('user_profile')->insert($data);
-            return response()->json(['status' => "User Registered Successfully"], 200);
+            return response()->json(['status' =>"success", "message" => "User Registered Successfully"], 200);
         } catch (\PDOException $pDOException) {
-            return response()->json(['error' => $pDOException->getMessage()], 500);
+            return response()->json(["status"=>"failed" , 'message' => $pDOException->getMessage()], 500);
         }
     }
 

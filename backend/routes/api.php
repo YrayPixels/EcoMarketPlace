@@ -41,13 +41,11 @@ Route::get('/check-status', function () {
 
 
 
-
 //Signup user
 Route::post('/create-user', [EcoTradeController::class, 'signUp']);
 
 //Login
 Route::post('/login', [EcoTradeController::class, 'login']);
-
 
 Route::get('check-user-available/{id}', [EcoTradeController::class, 'check_user']);
 
@@ -57,6 +55,7 @@ Route::post('/create-trade', [TradeManagementController::class, 'create_trade'])
 Route::get('/get-trade-details/{id}', [TradeManagementController::class, 'get_trade_details']);
 Route::post('/update-trade-details/{id}', [TradeManagementController::class, 'update_trade_details']);
 
+Route::get('/get-trades', [TradeManagementController::class, 'get_trade_items']);
 
 Route::post('/verify-trade', [TradeManagementController::class, 'verify_trade']);
 

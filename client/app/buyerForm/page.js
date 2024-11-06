@@ -50,7 +50,7 @@ const CarbonCreditForm = () => {
         onSubmit={handleSubmit}
       >
         <h2 className="text-2xl font-bold text-gray-700 mb-4 text-center">
-          Carbon Credit Documentation
+          Carbon Credit Documentation Main
         </h2>
 
         <div className="flex flex-wrap -mx-4 space-y-4">
