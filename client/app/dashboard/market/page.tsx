@@ -65,10 +65,10 @@ export default function MarketCards() {
                     </button>
                 </div>
 
-                <Modal isOpen={isModalOpen} onClose={closeModal} />
+                <Modal setUpdate={setUpdate} isOpen={isModalOpen} onClose={closeModal} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {items?.map((item: any) => (
+                    {marketItems?.map((item: any) => (
                         <div
                             key={item.id}
                             className="market-item relative flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white transition-transform transform hover:scale-105"

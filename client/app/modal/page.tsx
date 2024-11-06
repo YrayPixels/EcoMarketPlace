@@ -9,9 +9,10 @@ import { useWallet } from '@solana/wallet-adapter-react';
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
+  setUpdate: any;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, setUpdate }) => {
   const [step, setStep] = useState(1);
   const { publicKey } = useWallet();
 
@@ -71,9 +72,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     );
     if (response.data.status === "success") {
       alert("Listing successful. Please wait for approval.");
+      setUpdate(Math.random())
       onClose();
     } else {
       alert('Listing not possible');
+      setUpdate(Math.random())
+
       onClose();
     }
   };
