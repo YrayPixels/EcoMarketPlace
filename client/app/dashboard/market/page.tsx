@@ -71,11 +71,11 @@ export default function MarketCards() {
                     {marketItems?.map((item: any) => (
                         <div
                             key={item.id}
-                            className="market-item relative flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white transition-transform transform hover:scale-105"
+                            className="cursor-pointer market-item relative flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white transition-transform transform hover:scale-105"
                         >
                             <img src="/carbon logo.PNG" alt={item.name} className="w-full h-50 object-cover mb-4 rounded" />
                             <h2 className="text-lg font-semibold text-center">{item.item_name}</h2>
-                            <p className="text-xl font-bold text-blue-600">{item.item_price}</p>
+                            <p className="text-xl font-bold text-blue-600">Price:{item.item_price}</p>
                             <p className="text-xl font-bold text-blue-600">Quantity:{item.item_quantity}</p>
 
 
