@@ -14,7 +14,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Solar Energy Solutions</h3>
-              <img src="/images/solar-energy.jpg" alt="Solar Energy" className="w-full h-[200px] object-cover mb-4" />
+              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 We provide cutting-edge solar energy solutions that harness the power of the sun to generate clean energy for homes and businesses.
               </p>
@@ -24,8 +24,8 @@ const Services = () => {
           {/* Service 2 */}
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-3xl font-semibold mb-2">Wind Energy Services</h3>
-              <img src="/images/wind-energy.jpg" alt="Wind Energy" className="w-full h-[200px] object-cover mb-4" />
+              <h3 className="text-3xl font-semibold mb-2">water conservative</h3>
+              <img src="images/water-conservation.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 Our wind energy services help you harness wind power, providing a sustainable and renewable energy source for your operations.
               </p>
@@ -36,7 +36,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Energy Efficiency Consulting</h3>
-              <img src="/images/energy-efficiency.jpg" alt="Energy Efficiency" className="w-full h-[200px] object-cover mb-4" />
+              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 Our consulting services focus on improving energy efficiency for businesses, reducing costs, and enhancing sustainability.
               </p>
@@ -47,7 +47,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Sustainable Waste Management</h3>
-              <img src="/images/waste-management.jpg" alt="Waste Management" className="w-full h-[200px] object-cover mb-4" />
+              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 We offer sustainable waste management solutions that minimize environmental impact and promote recycling and reuse.
               </p>
@@ -58,7 +58,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Green Building Solutions</h3>
-              <img src="/images/green-building.jpg" alt="Green Building" className="w-full h-[200px] object-cover mb-4" />
+              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 Our green building solutions help you design and construct environmentally friendly buildings that save energy and resources.
               </p>
@@ -69,7 +69,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Community Outreach Programs</h3>
-              <img src="/images/community-outreach.jpg" alt="Community Outreach" className="w-full h-[200px] object-cover mb-4" />
+              <img src="/images/community-engagement.jpg" alt="img" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 We engage communities through outreach programs that promote sustainability and environmental stewardship.
               </p>

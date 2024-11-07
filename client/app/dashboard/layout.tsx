@@ -36,10 +36,10 @@ export default function RootLayout({
 
   return (
     <div className="h-fit grid grid-cols-4">
-      <div className="col-span-1">
+      <div className="col-span-1 pt-[70px]">
         <SideBar />
       </div>
-      <main className="min-h-screen col-span-3">
+      <main className="min-h-screen pt-[70px] col-span-3">
         {children}
       </main>
     </div>

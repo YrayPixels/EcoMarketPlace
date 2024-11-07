@@ -86,7 +86,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, setUpdate }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-lg p-6 z-10 w-8/12">
+      <div className="bg-white rounded-lg shadow-lg relative p-6 z-10 w-8/12">
         <h2 className="text-2xl font-semibold mb-4">Add Item</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <button

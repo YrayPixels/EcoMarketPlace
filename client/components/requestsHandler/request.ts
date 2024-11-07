@@ -19,7 +19,8 @@ export interface RequestInt {
     ) => Promise<RequestResponseInt>;
 }
 
-const API_BASE = "http://127.0.0.1:8000/api"
+export const Host_Url = "http://127.0.0.1:8000/";
+export const API_BASE = "http://127.0.0.1:8000/api"
 export const request: RequestInt = {
     get: async (url) => {
         try {
