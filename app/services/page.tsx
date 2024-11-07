@@ -36,7 +36,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Energy Efficiency Consulting</h3>
-              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
+              <img src="images/prject manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 Our consulting services focus on improving energy efficiency for businesses, reducing costs, and enhancing sustainability.
               </p>
@@ -47,7 +47,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Sustainable Waste Management</h3>
-              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
+              <img src="images/waste manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
               <p className="text-lg leading-relaxed">
                 We offer sustainable waste management solutions that minimize environmental impact and promote recycling and reuse.
               </p>
@@ -58,7 +58,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 p-4">
             <div className="service-box text-center p-6 border border-gray-300 rounded-md bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-3xl font-semibold mb-2">Green Building Solutions</h3>
-              <img src="images/energy manager.jpg" alt="Solar Energy" className="w-full  object-cover" />
+              <img src="images/green-building.jpg" alt="Solar Energy" className="w-full  object-cover mt-[50px]" />
               <p className="text-lg leading-relaxed">
                 Our green building solutions help you design and construct environmentally friendly buildings that save energy and resources.
               </p>
