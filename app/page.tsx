@@ -1,7 +1,7 @@
 "use client";
-import TestimonialSlider from '../app/TestimonialSlider/page';
+import TestimonialSlider from './TestimonialSlider/page';
 
-import '../app/globals.css';
+import './globals.css';
 import Navbar from '../components/navbar/page';
 import { useEffect } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
