@@ -1,18 +1,11 @@
-// components/Modal.tsx
 'use client';
 import { createTrade } from '@/components/requestsHandler/requestsItems';
-import { db } from '../firebaseConfig';
-import { collection, addDoc } from 'firebase/firestore';
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  setUpdate: any;
-}
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, setUpdate }) => {
+
+export default function Modal({ isOpen, onClose, setUpdate }: any) {
   const [step, setStep] = useState(1);
   const { publicKey } = useWallet();
 
@@ -270,4 +263,5 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, setUpdate }) => {
   );
 };
 
-export default Modal;
+
+

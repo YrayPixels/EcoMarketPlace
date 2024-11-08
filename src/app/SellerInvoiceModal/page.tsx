@@ -1,25 +1,16 @@
 "use client"
 import { Host_Url } from '@/components/requestsHandler/request';
 import { useWallet } from '@solana/wallet-adapter-react';
-
 import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, PublicKey, sendAndConfirmTransaction, SystemProgram, Transaction } from '@solana/web3.js';
 import React, { ReactNode, useState } from 'react';
 
-interface SellerInvoiceModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    selectedItem: any;
-}
 
-
-
-export default function SellerInvoiceModal({ isOpen, onClose, selectedItem }: SellerInvoiceModalProps) {
+export default function SellerInvoiceModal({ isOpen, onClose, selectedItem }: any) {
     if (!isOpen) return null;
     const { publicKey, signTransaction, sendTransaction } = useWallet();
     const connection = new Connection(clusterApiUrl('devnet'))
     const [loading, setLoading] = useState(false)
 
-    console.log(selectedItem);
     const handleBuying = async () => {
         setLoading(true)
         const tx = new Transaction()

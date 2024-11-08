@@ -1,8 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Modal from '../../modal/page';
+
 import SellerInvoiceModal from '../../SellerInvoiceModal/page';
 import { getTrades } from '@/components/requestsHandler/requestsItems/index';
+import Modal from '@/app/modal/page';
+
 
 interface Item {
     id: number;
@@ -13,6 +15,7 @@ interface Item {
     quantity: number;
     Quantity: string;
 }
+
 
 const items: Item[] = [
     { id: 1, name: 'Item One', image: '/carbon logo.PNG', price: 'Price:$10.00', Quantity: ' 50 ton', seller: 'Seller One', quantity: 50 },
@@ -92,9 +95,7 @@ export default function MarketCards() {
                 </div>
 
                 {selectedItem && (
-                    <SellerInvoiceModal selectedItem={selectedItem} isOpen={isInvoiceModalOpen} onClose={closeInvoiceModal}>
-
-                    </SellerInvoiceModal>
+                    <SellerInvoiceModal selectedItem={selectedItem} isOpen={isInvoiceModalOpen} onClose={closeInvoiceModal} />
                 )}
             </div>
         </div>

@@ -1,9 +1,9 @@
 'use client';
 
+import Navbar from '@/components/navbar/page';
 import { useState } from 'react';
-import Navbar from '@/components/navbar/page.jsx';
-import Modal from '../modal/page.tsx';
 
+import Modal from '../modal/page.tsx';
 
 
 const items = [

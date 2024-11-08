@@ -16,8 +16,13 @@ export default function RootLayout({
 
   useEffect(() => {
     if (!connected) {
-      connect()
-      // location.href = "/"
+      (async () => {
+        try {
+          await connect()
+        } catch (err) {
+          location.href = "/"
+        }
+      })()
     } else {
       //check if user has updated profile
       (async () => {
