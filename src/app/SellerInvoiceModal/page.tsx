@@ -1,6 +1,7 @@
-import { API_KEY } from '@/components/requestsHandler';
+"use client"
 import { Host_Url } from '@/components/requestsHandler/request';
 import { useWallet } from '@solana/wallet-adapter-react';
+
 import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, PublicKey, sendAndConfirmTransaction, SystemProgram, Transaction } from '@solana/web3.js';
 import React, { ReactNode, useState } from 'react';
 
@@ -9,6 +10,8 @@ interface SellerInvoiceModalProps {
     onClose: () => void;
     selectedItem: any;
 }
+
+
 
 export default function SellerInvoiceModal({ isOpen, onClose, selectedItem }: SellerInvoiceModalProps) {
     if (!isOpen) return null;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Navbar from '../../components/navbar/page.jsx';
+import Navbar from '@/components/navbar/page.jsx';
 import Modal from '../modal/page.tsx';
 
 

@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { checkUserExists } from '@/components/requestsHandler/requestsItems';
 import Cards from '@/components/files/cards';
+import { checkUserExists } from '@/components/requestsHandler/requestsItems/index';
 
 
 const cards = [

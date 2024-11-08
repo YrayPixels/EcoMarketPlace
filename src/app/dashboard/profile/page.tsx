@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { checkUserExists, signUpUser } from '@/components/requestsHandler/requestsItems';
+import { checkUserExists, signUpUser } from '@/components/requestsHandler/requestsItems/index';
 import Cards from '@/components/files/cards';
 import CustomInput from '@/components/customInput/customInput';
 
@@ -107,27 +107,27 @@ const Dashboard = () => {
                                 </h2>
 
 
-                                    <p className="text-gray-600 mt-2 text-sm">
-                                        {user?.email}
-                                    </p>
+                                <p className="text-gray-600 mt-2 text-sm">
+                                    {user?.email}
+                                </p>
 
 
-                                    <p className="text-gray-500 mt-1">
-                                        {user?.state}, {user?.country}
-                                    </p>
+                                <p className="text-gray-500 mt-1">
+                                    {user?.state}, {user?.country}
+                                </p>
 
 
-                                    <div className="mt-4 flex justify-center gap-4">
-                                        <button className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition">
-                                            Edit Profile
-                                        </button>
-                                        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition">
-                                            Settings
-                                        </button>
-                                    </div>
+                                <div className="mt-4 flex justify-center gap-4">
+                                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition">
+                                        Edit Profile
+                                    </button>
+                                    <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300 transition">
+                                        Settings
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 )}
             </div>
         </div>

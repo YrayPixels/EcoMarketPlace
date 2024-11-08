@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import '../public/css/animate.min.css';
-import '../public/css/jquery-ui.css';
-import '../public/css/responsive.css';
-import '../public/css/normalize.css';
+// import '../public/css/animate.min.css';
+// import '../public/css/jquery-ui.css';
+// import '../public/css/responsive.css';
+// import '../public/css/normalize.css';
 import { WalletProviderContext } from "@/components/WalletProviderContext/page";
 import Footer from "@/components/footer/page";
 import Navbar from "@/components/navbar/page";
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

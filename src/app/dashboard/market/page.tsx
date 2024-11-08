@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Modal from '../../modal/page';
 import SellerInvoiceModal from '../../SellerInvoiceModal/page';
-import { getTrades } from '@/components/requestsHandler/requestsItems';
+import { getTrades } from '@/components/requestsHandler/requestsItems/index';
 
 interface Item {
     id: number;
